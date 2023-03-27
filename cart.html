@@ -121,10 +121,13 @@ dataLayer.push({
   }
 });
         
-	gtag("event", "add_to_cart", {
-  currency: "USD",
-  value: 7.77,
-  items: [
+dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+  event: "add_to_cart",
+  ecommerce: {
+    currency: "USD",
+    value: 7.77,
+    items: [
     {
       item_id: "SKU_12345",
       item_name: "Stan and Friends Tee",
@@ -145,7 +148,8 @@ dataLayer.push({
       price: 9.99,
       quantity: 1
     }
-  ]
+    ]
+  }
 });
     </script>
 	
