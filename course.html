@@ -172,6 +172,36 @@ dataLayer.push({
     }]
   }
 });
+	    
+dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+  event: "purchase",
+  ecommerce: {
+      transaction_id: "TA_123",
+      affilation: "Google Merchandise Store",
+      value: 237.21,
+      tax: 4.22,
+      shipping: 6.76,
+      currency: "USD",
+      items: [
+       {
+        item_id: "SB_425",
+        item_name: "Python",
+        index: 0,
+        item_category: "Apparel",
+        price: 64.26,
+        quantity: 1
+      },
+      {
+        item_id: "SB_102",
+        item_name: "Java",
+        index: 1,
+        item_category: "Apparel",
+        price: 70.69,
+        quantity: 1
+      }]
+  }
+});
 	</script>
 
     <title>Contact Page</title>
